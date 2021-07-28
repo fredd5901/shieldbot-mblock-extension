@@ -1,0 +1,130 @@
+{	"extensionName": "Shieldbot",
+	"description": "A Extension for Shield Bot",
+	"version": "1.0",
+	"author": "Fred Bliss",
+	"homepage": "https://wiki.seeedstudio.com/Shield_Bot_V1.1/",
+	"sort":0,
+	"javascriptURL":"js/shieldbot.js",
+  "firmware":"1.0",
+  "extensionPort":0,
+	"blockSpecs": [
+		["h","Shieldbot Program","runArduino"],
+		[
+			"w",
+			"SetMaxSpeed( %d.speed )",
+			"digitalWrite",
+			"HIGH",
+			{
+				"setup":"shieldbot.setMaxSpeed({0});\n",
+				"inc":"#include \"Shieldbot.h\"",
+				"def":"Shieldbot shieldbot = Shieldbot();\n",
+				"work":"",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Drive Forward",
+			"Drive Forward",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"shieldbot.forward(); \n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Drive Backward",
+			"Drive Backward",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"shieldbot.backward(); \n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Turn Left",
+			"Turn Left",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"shieldbot.turnLeft(); \n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Turn Right",
+			"Turn Right",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"shieldbot.turnRight(); \n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Spin Left",
+			"Spin Left",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"shieldbot.spinLeft(); \n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Spin Right",
+			"Spin Right",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"shieldbot.spinRight(); \n",
+				"loop":""
+			}
+		],
+		[
+			"w",
+			"Stop",
+			"Stop",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"shieldbot.stop(); \n",
+				"loop":""
+			}
+		],
+		
+		["w", "Drive - left motor %d.speed right motor %d.speed","drive", "HIGH", "HIGH",
+		{"encode":"{d0}{d1}","setup":"","inc":"","def":"","work":"drive({0},{1});\n","loop":""}],
+	],
+	"menus": {
+		"speed":["HIGH","MED","LOW"]
+	},
+	"values":{
+		"HIGH":255,
+		"MED":125,
+		"LOW":50
+	},
+	"translators":{
+		"zh_CN":{
+			"Demo Program":"演示程序",
+			"HIGH":"高电平",
+			"LOW":"低电平",
+			"digitalWrite( %n , %d.digital )":"数字口输出( %n ,%d.digital )",
+      "blink":"闪烁"
+		}
+	}
+}
