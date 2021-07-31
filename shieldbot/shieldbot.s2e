@@ -12,7 +12,7 @@
 		[
 			"w",
 			"SetMaxSpeed( %d.speed )",
-			"digitalWrite",
+			"SetMaxSpeed",
 			"HIGH",
 			{
 				"setup":"shieldbot.setMaxSpeed({0});\n",
