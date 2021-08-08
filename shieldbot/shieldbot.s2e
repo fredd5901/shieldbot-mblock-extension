@@ -109,6 +109,9 @@
 		
 		["w", "Drive - left motor %d.speed right motor %d.speed","drive", "HIGH", "HIGH",
 		{"encode":"{d0}{d1}","setup":"","inc":"","def":"","work":"drive({0},{1});\n","loop":""}],
+
+		["R", "serial available bytes", "readS1",
+		{"setup":"","inc":"","def":"","work":"shieldbot.readS1();\n","loop":""}],
 	],
 	"menus": {
 		"speed":["HIGH","MED","LOW"]
