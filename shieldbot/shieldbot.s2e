@@ -110,8 +110,22 @@
 		["w", "Drive - left motor %d.speed right motor %d.speed","drive", "HIGH", "HIGH",
 		{"encode":"{d0}{d1}","setup":"","inc":"","def":"","work":"drive({0},{1});\n","loop":""}],
 
-		["R", "serial available bytes", "readS1",
-		{"setup":"","inc":"","def":"","work":"shieldbot.readS1();\n","loop":""}],
+		["B", "Line sensor S1 detects black","Line sensor S1 detects black",
+		{"setup":"","inc":"","def":"","work":"shieldbot.readS1(); \n","loop":""}],
+
+		["B", "Line sensor S2 detects black","Line sensor S2 detects black",
+		{"setup":"","inc":"","def":"","work":"shieldbot.readS2(); \n","loop":""}],
+
+		["B", "Line sensor S3 detects black","Line sensor S2 detects black",
+		{"setup":"","inc":"","def":"","work":"shieldbot.readS3(); \n","loop":""}],
+
+		["B", "Line sensor S4 detects black","Line sensor S2 detects black",
+		{"setup":"","inc":"","def":"","work":"shieldbot.readS4(); \n","loop":""}],
+
+		["B", "Line sensor S5 detects black","Line sensor S2 detects black",
+		{"setup":"","inc":"","def":"","work":"shieldbot.readS5(); \n","loop":""}],
+
+		
 	],
 	"menus": {
 		"speed":["HIGH","MED","LOW"]
